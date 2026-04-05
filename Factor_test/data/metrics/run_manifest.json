@@ -1,0 +1,36 @@
+{
+  "input_dir": "E:\\Goldman Sachs\\20260405_mission\\Data_Request\\data\\handled_outliers",
+  "output_dir": "E:\\Goldman Sachs\\20260405_mission\\Factor_test\\data\\metrics",
+  "factor_suffix": "_clip3",
+  "factor_count": 15,
+  "factors": [
+    "momentum_5_raw_clip3",
+    "momentum_20_raw_clip3",
+    "momentum_60_raw_clip3",
+    "reversal_5_raw_clip3",
+    "volatility_20_raw_clip3",
+    "downside_vol_20_raw_clip3",
+    "drawdown_20_raw_clip3",
+    "turnover_proxy_20_raw_clip3",
+    "illiq_20_raw_clip3",
+    "roe_raw_clip3",
+    "size_log_mcap_raw_clip3",
+    "ep_ttm_raw_clip3",
+    "bp_inv_raw_clip3",
+    "revenue_yoy_raw_clip3",
+    "netprofit_yoy_raw_clip3"
+  ],
+  "ic_lags": [
+    1,
+    5,
+    10,
+    20
+  ],
+  "n_groups": 10,
+  "min_ic_samples": 30,
+  "min_group_samples": 100,
+  "rows_total": 656700,
+  "days_total": 2189,
+  "stocks_per_day_min": 300,
+  "stocks_per_day_max": 300
+}

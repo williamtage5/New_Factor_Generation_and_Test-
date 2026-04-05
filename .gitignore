@@ -26,3 +26,6 @@ Thumbs.db
 .ruff_cache/
 .coverage
 htmlcov/
+
+# Large local datasets (keep repository lightweight)
+Data_Request/data/

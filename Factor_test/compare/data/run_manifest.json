@@ -1,0 +1,50 @@
+{
+  "metrics_input_dir": "E:\\Goldman Sachs\\20260405_mission\\Factor_test\\data\\metrics",
+  "output_data_dir": "E:\\Goldman Sachs\\20260405_mission\\Factor_test\\compare\\data",
+  "factor_count": 15,
+  "factors": [
+    "bp_inv_raw_clip3",
+    "downside_vol_20_raw_clip3",
+    "drawdown_20_raw_clip3",
+    "ep_ttm_raw_clip3",
+    "illiq_20_raw_clip3",
+    "momentum_20_raw_clip3",
+    "momentum_5_raw_clip3",
+    "momentum_60_raw_clip3",
+    "netprofit_yoy_raw_clip3",
+    "revenue_yoy_raw_clip3",
+    "reversal_5_raw_clip3",
+    "roe_raw_clip3",
+    "size_log_mcap_raw_clip3",
+    "turnover_proxy_20_raw_clip3",
+    "volatility_20_raw_clip3"
+  ],
+  "ic_lags": [
+    1,
+    5,
+    10,
+    20
+  ],
+  "thresholds": {
+    "icir_abs_threshold": 0.5,
+    "ls_ir_abs_threshold": 0.2,
+    "ls_win_rate_threshold": 0.52
+  },
+  "generated_tables": [
+    "factor_master_summary.csv",
+    "factor_rank_ic.csv",
+    "factor_rank_ls.csv",
+    "factor_rank_composite.csv",
+    "ic_lag_matrix.csv",
+    "ls_yearly_matrix.csv",
+    "quality_flags.csv"
+  ],
+  "generated_figures": [
+    "bar_icir.png",
+    "bar_ls_ir.png",
+    "heatmap_ic_lag.png",
+    "heatmap_ls_yearly.png",
+    "scatter_ic_vs_ls.png",
+    "rank_top_bottom.png"
+  ]
+}

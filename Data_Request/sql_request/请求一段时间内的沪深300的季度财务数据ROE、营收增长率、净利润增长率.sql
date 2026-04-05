@@ -1,0 +1,22 @@
+﻿DECLARE @start VARCHAR(8) = '20150101';
+DECLARE @end   VARCHAR(8) = '20231231';
+
+WITH member_pool AS (
+    SELECT DISTINCT
+        w.S_CON_WINDCODE AS StockCode
+    FROM dbo.AINDEXHS300FREEWEIGHT w
+    WHERE w.S_INFO_WINDCODE = '000300.SH'
+      AND w.TRADE_DT BETWEEN @start AND @end
+)
+SELECT
+    f.S_INFO_WINDCODE AS StockCode,
+    f.ANN_DT AS AnnounceDate,
+    f.REPORT_PERIOD AS ReportPeriod,
+    f.S_FA_ROE AS ROE,
+    f.S_FA_YOY_OR AS Revenue_YoY,
+    f.S_FA_YOYNETPROFIT AS NetProfit_YoY
+FROM dbo.ASHAREFINANCIALINDICATOR f
+JOIN member_pool m
+  ON f.S_INFO_WINDCODE = m.StockCode
+WHERE f.ANN_DT <= @end
+ORDER BY f.S_INFO_WINDCODE, f.ANN_DT;

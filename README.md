@@ -17,11 +17,12 @@ This project includes:
 - `Data_Request/`
 - `Data_Request/sql_request/`: SQL templates for raw data pulls
 - `Data_Request/data_processing/`: preprocessing and factor generation scripts
-- `Data_Request/data/`: raw/merged/cleaned datasets
+- `Data_Request/data/`: local full datasets (ignored in git due size)
 - `Factor_test/`
 - `Factor_test/scripts/`: single-factor test pipeline scripts
 - `Factor_test/compare/scripts/`: cross-factor comparison scripts
 - `Factor_test/data/metrics/`: per-factor IC/group stats and figures
+- `examples/data_samples/`: small sample CSV files for quick inspection
 - `结果分析报告.md`: generated result analysis report
 
 ## Main Scripts
@@ -52,3 +53,8 @@ For each factor under `Factor_test/data/metrics/<factor_name>/`:
 - `ic_decay.png`: IC decay curve
 - `factor_hist.png`: factor histogram
 - `group_heatmap.png`: decile return heatmap
+
+## Data Note
+
+The full local data under `Data_Request/data/` is large and excluded by `.gitignore`.
+Representative sample files are provided under `examples/data_samples/`.
